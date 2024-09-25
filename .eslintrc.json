@@ -1,0 +1,135 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:ang-root",
+                "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "scope:main-panel",
+                "onlyDependOnLibsWithTags": [
+                  "scope:main-panel",
+                  "scope:shared",
+                  "scope:dashboard",
+                  "scope:confirm-packing",
+                  "scope:packing-status",
+                  "scope:create-bundle",
+                  "scope:manual-delivery-note",
+                  "scope:customer-feeding",
+                  "scope:container-check-scan",
+                  "scope:pack-bundles",
+                  "scope:validate-rejected-bundles",
+                  "scope:truck-load-manager",
+                  "scope:direct-load",
+                  "scope:container-inscan"
+                ]
+              },
+              {
+                "sourceTag": "scope:cart",
+                "onlyDependOnLibsWithTags": ["scope:cart", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:orders",
+                "onlyDependOnLibsWithTags": ["scope:orders", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:products",
+                "onlyDependOnLibsWithTags": ["scope:products", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:create-bundle",
+                "onlyDependOnLibsWithTags": ["scope:create-bundle", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:manual-delivery-note",
+                "onlyDependOnLibsWithTags": ["scope:manual-delivery-note", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:customer-feeding",
+                "onlyDependOnLibsWithTags": ["scope:customer-feeding", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:validate-rejected-bundles",
+                "onlyDependOnLibsWithTags": ["scope:validate-rejected-bundles", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:validate-rejected-bundles",
+                "onlyDependOnLibsWithTags": ["scope:validate-rejected-bundles", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:container-check-scan",
+                "onlyDependOnLibsWithTags": ["scope:container-check-scan", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:truck-load-manager",
+                "onlyDependOnLibsWithTags": ["scope:truck-load-manager", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:direct-load",
+                "onlyDependOnLibsWithTags": ["scope:direct-load", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:container-inscan",
+                "onlyDependOnLibsWithTags": ["scope:container-inscan", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:ui", "type:domain", "type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:domain", "type:util"]
+              },
+              {
+                "sourceTag": "type:domain",
+                "onlyDependOnLibsWithTags": ["type:domain", "type:util"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {
+        "semi": "error"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}

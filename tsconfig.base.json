@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@amm/delivery/orders/feature": ["libs/delivery/orders/feature/src/index.ts"],
+      "@amm/delivery/products/feature": ["libs/delivery/products/feature/src/index.ts"],
+      "@amm/shared/components/button/feature": ["libs/shared/components/button/feature/src/index.ts"],
+      "@amm/shared/components/card/feature": ["libs/shared/components/card/feature/src/index.ts"],
+      "@angular-monorepo-modules/delivery-cart-feature": ["libs/delivery/cart/feature/src/index.ts"],
+      "@angular-monorepo-modules/shared-components-by-button-feature": ["libs/shared/components/my-button/feature/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
