@@ -1,0 +1,75 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "ABS-Sonar",
+    "projectKey": "Sherman"
+  },
+  "workbench.startupEditor": "none",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.hovers.pullRequests.enabled": false,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.virtualRepositories.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.blame.dateFormat": "DD-MMM-YYYY",
+  "gitlens.blame.format": "${author|20} ${date|14-}",
+  "gitlens.hovers.currentLine.changes": false,
+  "gitlens.hovers.currentLine.details": false,
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.hovers.annotations.over": "annotation",
+  "gitlens.hovers.changesDiff": "hunk",
+  "gitlens.deepLinks.schemeOverride": false,
+  "nxConsole.enableTaskExecutionDryRunOnChange": false,
+  "json.maxItemsComputed": 25000,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "html.format.wrapLineLength": 180,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+  "editor.stickyScroll.defaultModel": "outlineModel",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.organizeImports": "explicit"
+  },
+  "eslint.useFlatConfig": true,
+  "nxConsole.generatorAllowlist": [
+    "@nx/angular:library",
+    "@schematics/angular:component",
+    "@schematics/angular:service"
+  ],
+  "nxConsole.commonNxCommands": [
+    "serve",
+    "serve --host=0.0.0.0",
+    "build",
+    "run-many -t lint",
+    "run-many -t test",
+    "run-many -t lint --skip-nx-cache",
+    "run-many -t test --skip-nx-cache",
+  ],
+}
